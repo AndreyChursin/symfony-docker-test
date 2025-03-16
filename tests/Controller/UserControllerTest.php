@@ -38,8 +38,8 @@ class UserControllerTest extends WebTestCase
         $this->assertNotNull($user, 'Пользователь не был создан в базе данных');
 
         // Удаляем созданного пользователя
-        // $this->entityManager->remove($user);
-        // $this->entityManager->flush();
+        $this->entityManager->remove($user);
+        $this->entityManager->flush();
     }
 
     protected function tearDown(): void
